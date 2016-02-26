@@ -5,12 +5,12 @@
 
 ## [Alpine Linux](http://alpinelinux.org/) base image plus s6 init system
 
-Built FROM [cleardevice/alpine-base](https://github.com/cleardevice/docker-alpine-base)
+Built FROM [gliderlabs/alpine](https://github.com/gliderlabs/alpine)
 
 ### ...start your Dockerfile
 
 ```shell
-FROM cleardevice/alpine-init
+FROM cleardevice/docker-alpine-init
 ```
 
 + Provides s6 init system via [s6-overlay](https://github.com/just-containers/s6-overlay), cURL and Bash
