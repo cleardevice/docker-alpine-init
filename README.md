@@ -1,15 +1,15 @@
 # docker-alpine-init
 
-[![](https://badge.imagelayers.io/robwdux/docker-alpine-init:latest.svg)](https://imagelayers.io/?images=robwdux/docker-alpine-init:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/cleardevice/docker-alpine-init:latest.svg)](https://imagelayers.io/?images=cleardevice/docker-alpine-init:latest 'Get your own badge on imagelayers.io')
 
 ## [Alpine Linux](http://alpinelinux.org/) base image plus s6 init system
 
-Built FROM [robwdux/alpine-base](https://github.com/robwdux/docker-alpine-base)
+Built FROM [cleardevice/alpine-base](https://github.com/cleardevice/docker-alpine-base)
 
 ### ...start your Dockerfile
 
 ```shell
-FROM robwdux/alpine-init
+FROM cleardevice/alpine-init
 ```
 
 + Provides s6 init system via [s6-overlay](https://github.com/just-containers/s6-overlay), cURL and Bash
@@ -22,14 +22,14 @@ FROM robwdux/alpine-init
 ```shell
 sudo docker run --rm -it \
                    --name init \
-                   robwdux/docker-alpine-init \
+                   cleardevice/docker-alpine-init \
                    bash
 ```
 ### shell into a daemonized running container
 ```shell
 sudo docker run -d \
                 --name init \
-                robwdux/docker-alpine-init \
+                cleardevice/docker-alpine-init \
                 ping 8.8.8.8 && \
 sudo docker exec -it init bash
 
@@ -57,7 +57,7 @@ root     root     ps                 105   100
 ```
 ## Customization
 
-### [Working with Alpine Linux](https://github.com/robwdux/docker-alpine-base#working-with-alpine-linux) overview
+### [Working with Alpine Linux](https://github.com/cleardevice/docker-alpine-base#working-with-alpine-linux) overview
 
 ### Working with s6 init system
 

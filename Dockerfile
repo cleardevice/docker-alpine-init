@@ -1,8 +1,8 @@
-FROM robwdux/docker-alpine-base
+FROM cleardevice/docker-alpine-base
 
-MAINTAINER rob dux <robwdux@gmail.com>
+MAINTAINER cd <cleardevice@gmail.com>
 
-ENV S6_VERSION=1.16.0.0 \
+ENV S6_VERSION=1.17.1.2 \
     SVC_TL_DIR=/etc/s6/svc-templates \
     SVC_DIR=/etc/services.d
 
