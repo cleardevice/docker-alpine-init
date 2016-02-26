@@ -1,6 +1,13 @@
-FROM cleardevice/docker-alpine-base
+FROM gliderlabs/alpine
 
 MAINTAINER cd <cleardevice@gmail.com>
+
+RUN set -o nounset -o errexit -o xtrace -o verbose && \
+    # update index and install packages
+    apk add --update-cache \
+      curl ca-certificates bash && \
+    # remove package index
+    rm -rf /var/cache/apk/*
 
 ENV S6_VERSION=1.17.1.2 \
     SVC_TL_DIR=/etc/s6/svc-templates \
